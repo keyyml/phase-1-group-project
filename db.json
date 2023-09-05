@@ -33,14 +33,14 @@
           "name": "Minotaur",
           "image": "",
           "origin": "Greek mythology",
-          "desription": "With the body of a man and the head and tail of a bull, making it safe to assume they will never having a bad hair day. This ferocious best is known to reside in the center of a labrynth or maze created by King Minos advised by the oracle Delhi to hold the Minotaur at bay."
+          "desription": "With the body of a man and the head/tail of a bull, it's safe to assume they will never have a bad hair day. This ferocious beast is known to reside in the center of a labrynth or maze created by King Minos advised by the oracle Delhi to hold the Minotaur at bay."
         },
          {
           "id": 6,
           "name": "Gorgon",
           "image": "",
           "origin": "Greek mythology",
-          "desription":"This enticing snake haired madona turns men into stone with just a glance, teaching people not to be seduced by stand alone beauty."
+          "desription":"This enticing snake haired madonna turns men into stone with just a glance, teaching people not to be seduced by stand alone beauty."
         }, 
         {
           "id": 7,
@@ -54,7 +54,7 @@
           "name": "Vampire",
           "image": "",
           "origin": "18th Century southeastern Europe",
-          "desription": "An undead immortal creature, who are characterized by sharp fangs, pale skin, and the urge and need to live off of the blood of the living. Can be stopped by a measley wooden stake or a little bit of Vitamin D."
+          "desription": "An undead immortal creature, who's characterized by sharp fangs, pale skin, and the urge and need to live off of the blood of the living. Can be stopped by a measley wooden stake or a little bit of Vitamin D."
         }
     ]
   }
