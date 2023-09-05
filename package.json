@@ -1,0 +1,60 @@
+{
+  "mythical creatures": [
+    {
+      "id": 1,
+      "name": "Mermaid",
+      "image": "",
+      "origin": "Greek, Syrian, Babylonian and Polynesian mythology",
+      "desription": "This alluring fish human rules the underwater world, its endeavors range from collecting thingamabobs to being a menace and causing floods, shipwrecks, storms and drownings. They are also said to be able to transform into 'human form' while dry on land."
+    },
+    {
+        "id": 2,
+        "name": "Banshee",
+        "image": "",
+        "origin": "Irish Folklore",
+        "desription": "A female spirit who heralds the death of a family member by letting lose a blood curdling screech."
+      },
+      {
+        "id": 3,
+        "name": "Unicorn",
+        "image": "",
+        "origin": "Ancient Mesopotamian, Indian, Greek and Chinese mythology",
+        "desription": "An elegant and majestic horse-like creature with a single horn (often confused witha dunce hat) sticking upright on its head. A unicorn's horn is said to also contain healing properties."
+      },
+      {
+        "id": 4,
+        "name": "Oni",
+        "image": "",
+        "origin": "Japanese mythology",
+        "desription": "A giant man eating monster with a face as red as a tomato. They are often known to carry heavy iron clubs and violently punish evildoers. In other words, 'omae wa mou shindeiru'."
+      },
+      {
+        "id": 5,
+        "name": "Minotaur",
+        "image": "",
+        "origin": "Greek mythology",
+        "desription": "With the body of a man and the head and tail of a bull, making it safe to assume they will never having a bad hair day. This ferocious best is known to reside in the center of a labrynth or maze created by King Minos advised by the oracle Delhi to hold the Minotaur at bay."
+      },
+       {
+        "id": 6,
+        "name": "Gorgon",
+        "image": "",
+        "origin": "Greek mythology",
+        "desription":"This enticing snake haired madona turns men into stone with just a glance, teaching people not to be seduced by stand alone beauty."
+      }, 
+      {
+        "id": 7,
+        "name": "Griffin",
+        "image": "",
+        "origin": " Egyptian and Persian mythology",
+        "desription": "A bald headed eagle with large wings and the body of a lion, both powerful and majestic. This creature is know to be the protector of valuable items."
+      }, 
+      {
+        "id": 8,
+        "name": "Vampire",
+        "image": "",
+        "origin": "18th Century southeastern Europe",
+        "desription": "An undead immortal creature, who are characterized by sharp fangs, pale skin, and the urge and need to live off of the blood of the living. Can be stopped by a measley wooden stake or a little bit of Vitamin D."
+      }
+  ]
+}
