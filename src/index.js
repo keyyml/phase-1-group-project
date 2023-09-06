@@ -19,6 +19,19 @@ fetch("http://localhost:3000/mythological-monsters")
             const img = document.createElement('img')
             img.src = creatureObj.image
             img.alt = creatureObj.name
+
+            creatureCard.addEventListener('mouseover', (e) => onMouseOver(e))
+            creatureCard.addEventListener('mouseout', (e) => onMouseOut(e))
+
+            function onMouseOver(e){
+                creatureCard.style.boxShadow = '10px 10px 10px rgb(223, 43, 43)'
+                creatureCard.style.border = 'rgb(223, 43, 43) solid 1px'
+            }
+
+            function onMouseOut(e){
+                creatureCard.style.boxShadow = '4px 4px 10px #c9c8c8'
+                creatureCard.style.border = 'rgb(255, 255, 255) solid 1px'
+            }
             
             //console.log(img)
 
