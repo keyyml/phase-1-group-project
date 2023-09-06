@@ -1,0 +1,32 @@
+#myth-monster-header {
+    text-align: center;
+}
+
+form.collapsed {
+    visibility: visible;
+  }
+
+/* form.collapsed {
+    visibility: hidden;
+  } */
+
+  #info-footer {
+    text-align: center;
+}
+
+.list ul {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.list-li {
+    list-style: none;
+    width: 200px;
+    box-shadow: 4px 4px 10px #c9c8c8;
+    padding: 5px;
+    margin: 10px;
+}
