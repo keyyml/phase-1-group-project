@@ -32,10 +32,26 @@ fetch("http://localhost:3000/mythological-monsters")
             creatureCard.appendChild(originInfo)
             
             const descInfo = document.createElement('h4')
-            descInfo.textContent = creatureObj.desription
+            descInfo.textContent = creatureObj.description
             creatureCard.appendChild(descInfo)
             console.log(descInfo)
             
             ul.append(creatureCard)
         });
+    }
+
+    const newCreatureForm = document.querySelector('#create-monst-form')
+    newCreatureForm.addEventListener('submit', (e) => addNewCreature(e))
+    
+    function addNewCreature(e) {
+        e.preventDefault()
+        // console.log(e.target.name.value)
+        const newCreatureObj = {
+            "name": e.target.name.value,
+            "image": e.target.image.value,
+            "origin": e.target.origin.value,
+            "description": e.target.description.value
+        }
+
+        renderCreatures([newCreatureObj])
     }
