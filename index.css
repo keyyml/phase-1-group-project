@@ -1,6 +1,6 @@
 #myth-monster-header img {
     image-rendering: center;
-    background-color: black;
+    background-color: transparent;
     
 }
 
@@ -14,7 +14,7 @@
 }
 
 .info-footer img {
-    background-color: black;
+    background-color: transparent;
 }
 form.collapsed {
     visibility: visible;
