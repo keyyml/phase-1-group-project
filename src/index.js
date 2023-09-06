@@ -34,10 +34,12 @@ fetch("http://localhost:3000/mythological-monsters")
             const descInfo = document.createElement('h4')
             descInfo.textContent = creatureObj.description
             creatureCard.appendChild(descInfo)
-            console.log(descInfo)
+            //console.log(descInfo)
             
             ul.append(creatureCard)
+            
         });
+        //console.log(ul)
     }
 
     const newCreatureForm = document.querySelector('#create-monst-form')
@@ -55,3 +57,24 @@ fetch("http://localhost:3000/mythological-monsters")
 
         renderCreatures([newCreatureObj])
     }
+
+    const toggleFormButtom = document.querySelector('#create-button')
+    const creatureForm = document.querySelector('#create-monst-form')
+
+    function handleToggleForm(e) {
+        const creatureFormHidden = creatureForm.classList.toggle('collapsed')
+
+        if (creatureFormHidden){
+            toggleFormButtom.textContent = 'Make a Monster!'
+        } else {
+            toggleFormButtom.textContent = 'Hide'
+        }
+    }
+
+    toggleFormButtom.addEventListener('click', handleToggleForm)
+
+    creatureForm.addEventListener('click', (e) => {
+        e.preventDefault()
+
+        //console.log(e.target)
+    })

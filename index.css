@@ -1,11 +1,5 @@
 #myth-monster-header img {
-<<<<<<< HEAD
-    image-rendering: center;
-    background-color: transparent;
-    
-=======
     image-rendering: center;    
->>>>>>> 5426f7d17db460fa60b45af59898efb268c06d1a
 }
 
 #myth-monster-header {
@@ -17,12 +11,6 @@
 
 }
 
-<<<<<<< HEAD
-.info-footer img {
-    background-color: transparent;
-}
-=======
->>>>>>> 5426f7d17db460fa60b45af59898efb268c06d1a
 form.collapsed {
     visibility: visible;
   }
