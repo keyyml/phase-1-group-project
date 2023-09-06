@@ -2,39 +2,40 @@ fetch("http://localhost:3000/mythological-monsters")
     .then((resp) => resp.json())
     .then((data) => renderCreatures(data))
 
+    
+
     function renderCreatures(creaturesArr) {
 
         const ul = document.querySelector('#list-creatures-here')
-
-        creaturesArr.forEach((creaturesObj) => {
+        
+        creaturesArr.forEach((creatureObj) => {
             //console.log(creaturesObj)
-
-            const creatureCards = document.createElement('li')
             //console.log(li)
-            creatureCards.classList = "list-li"
-            creatureCards.textContent = creaturesObj.name
+            const creatureCard = document.createElement('li')
+            creatureCard.classList = "list-li"
+            creatureCard.textContent = creatureObj.name
             //console.log(creatureCards)
 
             const img = document.createElement('img')
-            img.src = creaturesObj.image
-            img.alt = creaturesObj.name
+            img.src = creatureObj.image
+            img.alt = creatureObj.name
             
             //console.log(img)
 
-            creatureCards.appendChild(img)
+            creatureCard.appendChild(img)
             //console.log(creatureCards)
-            ul.appendChild(creatureCards)
-            console.log(ul)
+            // ul.appendChild(creatureCards)
+            // console.log(ul)
              
             const originInfo = document.createElement('h3')
-            originInfo.textContent = creaturesObj.origin
-            creatureCards.appendChild(originInfo)
+            originInfo.textContent = creatureObj.origin
+            creatureCard.appendChild(originInfo)
             
             const descInfo = document.createElement('h4')
-            descInfo.textContent = creaturesObj.description
-            creatureCards.appendChild(descInfo)
-
-
+            descInfo.textContent = creatureObj.desription
+            creatureCard.appendChild(descInfo)
+            console.log(descInfo)
             
+            ul.append(creatureCard)
         });
     }
