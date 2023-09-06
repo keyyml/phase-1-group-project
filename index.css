@@ -31,7 +31,7 @@ form.collapsed {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .list-li {
@@ -86,15 +86,15 @@ footer {
     height: 40rem;
     display: inline-grid;
     margin: 1rem 2rem;
-    box-shadow: 3px 4px #000000;
+    box-shadow: 3px 4px #ffffff;
     color:rgb(255, 230, 0);
     background-color: #000000;
   }
 
   .creature-avatar {
     justify-self: center;
-    height: 12rem;
-    width: auto;
+    max-width: 100%;
+    max-height: 100%;
   }
 
   .input-text {
