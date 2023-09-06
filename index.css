@@ -1,7 +1,21 @@
+#myth-monster-header img {
+    image-rendering: center;
+    background-color: black;
+    
+}
+
 #myth-monster-header {
     text-align: center;
 }
 
+.info-footer { 
+    text-align: center;
+
+}
+
+.info-footer img {
+    background-color: black;
+}
 form.collapsed {
     visibility: visible;
   }
@@ -14,7 +28,7 @@ form.collapsed {
     text-align: center;
 }
 
-.list ul {
+/* .list ul {
     margin: 10px;
     padding: 10px;
     display: flex;
@@ -29,4 +43,33 @@ form.collapsed {
     box-shadow: 4px 4px 10px #c9c8c8;
     padding: 5px;
     margin: 10px;
+} */
+
+body {
+    background-image: url('https://i.ibb.co/zZhpQRp/5083843.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+  
+footer {
+    margin-top: auto;
+}
+
+#create-monst-form {
+    font-family:'Lucida Console';
+    color: rgb(225, 194, 35);
+    text-align: center;
+    text-shadow: 3px 5px 5px black;
+    font-size: 22px;
+}
+
+.evnt-button {
+    font-size: 22px;
+    font-family:'papyrus';
+    box-shadow: 2px 2px 2px 2px rgb(225, 194, 35);
+    background-color: black;
+    color:rgb(225, 194, 35);
+}
+
