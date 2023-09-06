@@ -2,42 +2,56 @@ fetch("http://localhost:3000/mythological-monsters")
     .then((resp) => resp.json())
     .then((data) => renderCreatures(data))
 
+    
+
     function renderCreatures(creaturesArr) {
 
         const ul = document.querySelector('#list-creatures-here')
-
-        creaturesArr.forEach((creaturesObj) => {
+        
+        creaturesArr.forEach((creatureObj) => {
             //console.log(creaturesObj)
-
-            const creatureCards = document.createElement('li')
-            
             //console.log(li)
-
-            creatureCards.textContent = creaturesObj.name
+            const creatureCard = document.createElement('li')
+            creatureCard.classList = "list-li"
+            creatureCard.textContent = creatureObj.name
             //console.log(creatureCards)
 
             const img = document.createElement('img')
-            img.src = creaturesObj.image
-            img.alt = creaturesObj.name
+            img.src = creatureObj.image
+            img.alt = creatureObj.name
+            
             //console.log(img)
 
-            creatureCards.appendChild(img)
+            creatureCard.appendChild(img)
             //console.log(creatureCards)
-            ul.appendChild(creatureCards)
-            console.log(ul)
-
-            const h3 = document.createElement('h3')
-            h3.textContent = creatureObj.origin
-            card.appendChild(h3)
-        
-            const h4 = document.createElement('h4')
-            h4.textContent = creatureObj.description
-            card.appendChild(h4)
+            // ul.appendChild(creatureCards)
+            // console.log(ul)
              
+            const originInfo = document.createElement('h3')
+            originInfo.textContent = creatureObj.origin
+            creatureCard.appendChild(originInfo)
+            
+            const descInfo = document.createElement('h4')
+            descInfo.textContent = creatureObj.description
+            creatureCard.appendChild(descInfo)
+            console.log(descInfo)
+            
+            ul.append(creatureCard)
         });
-        ul.appendChild(creatureCards)
     }
 
+    const newCreatureForm = document.querySelector('#create-monst-form')
+    newCreatureForm.addEventListener('submit', (e) => addNewCreature(e))
+    
+    function addNewCreature(e) {
+        e.preventDefault()
+        // console.log(e.target.name.value)
+        const newCreatureObj = {
+            "name": e.target.name.value,
+            "image": e.target.image.value,
+            "origin": e.target.origin.value,
+            "description": e.target.description.value
+        }
 
-
-
+        renderCreatures([newCreatureObj])
+    }

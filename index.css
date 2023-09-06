@@ -1,7 +1,11 @@
 #myth-monster-header img {
+<<<<<<< HEAD
     image-rendering: center;
     background-color: transparent;
     
+=======
+    image-rendering: center;    
+>>>>>>> 5426f7d17db460fa60b45af59898efb268c06d1a
 }
 
 #myth-monster-header {
@@ -13,9 +17,12 @@
 
 }
 
+<<<<<<< HEAD
 .info-footer img {
     background-color: transparent;
 }
+=======
+>>>>>>> 5426f7d17db460fa60b45af59898efb268c06d1a
 form.collapsed {
     visibility: visible;
   }
@@ -28,21 +35,38 @@ form.collapsed {
     text-align: center;
 }
 
-.list ul {
+.list-ul {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     margin: 10px;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
+    justify-content:center;
 }
 
 .list-li {
     list-style: none;
-    width: 200px;
     box-shadow: 4px 4px 10px #c9c8c8;
-    padding: 5px;
-    margin: 10px;
+    padding: 1rem;
+    font-size: 20px;
+    color: rgb(225, 194, 35);
+    text-align: center;
+    border: rgb(255, 255, 255) solid 1px;
+    width: 20rem;
+    height: 40rem;
+    display: inline-grid;
+    margin: 1rem 2rem;
+    background-color: #000000;
+
+}
+
+.list-li img {
+    justify-self: center;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 body {
@@ -72,4 +96,6 @@ footer {
     background-color: black;
     color:rgb(225, 194, 35);
 }
+
+
 
