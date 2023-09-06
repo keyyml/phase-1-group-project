@@ -11,11 +11,11 @@
 
 }
 
-form.collapsed {
+/* form.expand {
     visibility: visible;
   }
 
-/* form.collapsed {
+form.collapsed {
     visibility: hidden;
   } */
 
@@ -36,19 +36,17 @@ form.collapsed {
 }
 
 .list-li {
-    list-style: none;
+    list-style:none;
     box-shadow: 4px 4px 10px #c9c8c8;
-    padding: 1rem;
-    font-size: 20px;
-    color: rgb(225, 194, 35);
     text-align: center;
     border: rgb(255, 255, 255) solid 1px;
+    padding: 1rem;
     width: 20rem;
     height: 40rem;
     display: inline-grid;
     margin: 1rem 2rem;
+    color:rgb(255, 230, 0);
     background-color: #000000;
-
 }
 
 .list-li img {
@@ -85,5 +83,21 @@ footer {
     color:rgb(225, 194, 35);
 }
 
+.card {
+    text-align: center;
+    border: rgb(255, 255, 255) solid 1px;
+    padding: 1rem;
+    width: 20rem;
+    height: 40rem;
+    display: inline-grid;
+    margin: 1rem 2rem;
+    box-shadow: 3px 4px #ffffff;
+    color:rgb(255, 230, 0);
+    background-color: #000000;
+  }
 
+  .input-text {
+    font-size: 20px;
+    font-family: 'Lucida Console';
+  }
 
