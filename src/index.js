@@ -71,9 +71,25 @@ function renderCreatureCards(creatureArr) {
         
         creatureCollection.appendChild(card)
         
-        console.log(creatureCollection)
-        console.log(creatureArr)
+        // console.log(creatureCollection)
+        // console.log(creatureArr)
 
     })
+}
 
+const form = document.querySelector('#create-monst-form')
+form.addEventListener('submit', (e) => addNewCreature(e))
+function addNewCreature(e) {
+    e.preventDefault()
+
+    // console.log(e.target.name.value)
+    const newCreatureObj = {
+        "name": e.target.name.value,
+        "image": e.target.image.value,
+        "origin": e.target.origin.value,
+        "description": e.target.description.value
+    }
+
+    renderCreatureCards([newCreatureObj])
+    console.log(e.target.name.value)
 }
