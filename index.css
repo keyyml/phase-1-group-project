@@ -17,9 +17,13 @@ form.collapsed {
     visibility: visible;
   }
 
-/* form.collapsed {
+form.collapsed {
     visibility: hidden;
-  } */
+  }
+
+form.expand {
+    visibility: visible;
+}
 
   #info-footer {
     text-align: center;
@@ -89,6 +93,8 @@ footer {
     box-shadow: 3px 4px #ffffff;
     color:rgb(255, 230, 0);
     background-color: #000000;
+    box-shadow: 4px 4px 10px #ffffff;
+    flex-basis: autocode;
   }
 
   .creature-avatar {
@@ -101,3 +107,4 @@ footer {
     font-size: 20px;
     font-family: 'Lucida Console';
   }
+ 

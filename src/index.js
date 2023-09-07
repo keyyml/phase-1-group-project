@@ -93,3 +93,20 @@ function addNewCreature(e) {
     renderCreatureCards([newCreatureObj])
     console.log(e.target.name.value)
 }
+
+    const toggleFormButtom = document.querySelector('#create-button')
+    const formContainer = document.getElementById('create-monster')
+    // const creatureForm = document.querySelector('#create-monst-form')
+    function handleFormButton(e) {
+        e.preventDefault()
+        const creatureFormHidden = creatureForm.classList.toggle('collapsed')
+        if (creatureFormHidden){
+            toggleFormButtom.textContent = 'Make a Monster!'
+            creatureForm.style.display = "none";
+        } else {
+            toggleFormButtom.textContent = 'Hide'
+            creatureForm.style.display = "block";
+        }
+    }
+
+    toggleFormButtom.addEventListener('click', handleFormButton)
