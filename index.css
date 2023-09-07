@@ -11,14 +11,6 @@
 
 }
 
- /* /* form.expand {
-    visibility: visible;
-  } */
-
-form.collapsed {
-    visibility: hidden;
-  }  */ 
-
   #info-footer {
     text-align: center;
 }
@@ -46,7 +38,7 @@ form.collapsed {
     display: inline-grid;
     margin: 1rem 2rem;
     color:rgb(255, 230, 0);
-    background-color: #000000;
+    background-color: #1d0143;
 }
 
 .list-li img {
@@ -79,22 +71,9 @@ footer {
     font-size: 22px;
     font-family:'papyrus';
     box-shadow: 2px 2px 2px 2px rgb(225, 194, 35);
-    background-color: black;
+    background-color:  #1d0143;
     color:rgb(225, 194, 35);
 }
-
-.card {
-    text-align: center;
-    border: rgb(255, 255, 255) solid 1px;
-    padding: 1rem;
-    width: 20rem;
-    height: 40rem;
-    display: inline-grid;
-    margin: 1rem 2rem;
-    box-shadow: 3px 4px #ffffff;
-    color:rgb(255, 230, 0);
-    background-color: #000000;
-  }
 
   .input-text {
     font-size: 20px;

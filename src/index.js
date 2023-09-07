@@ -1,11 +1,16 @@
 fetch("http://localhost:3000/mythological-monsters")
     .then((resp) => resp.json())
-    .then((data) => renderCreatures(data))
+    .then((data) =>renderCreatures(data))
 
-    
     function renderCreatures(creaturesArr) {
 
         const ul = document.querySelector('#list-creatures-here')
+        
+        const frontOfCard = document.getElementById('front')
+        console.log(frontOfCard)
+
+        const backofCard = document.getElementById('front')
+        console.log(backofCard)
         
         creaturesArr.forEach((creatureObj) => {
             //console.log(creaturesObj)
@@ -39,37 +44,18 @@ fetch("http://localhost:3000/mythological-monsters")
                 creatureCard.style.border = 'rgb(255, 255, 255) solid 1px'
                 creatureName.style.textShadow = 'none'
             }
-            
-            img.addEventListener('mouseover', (e) => onmouseover(e))
-
-            function onmouseover(e){
-                //console.log(e)
-            }
-            
-            //console.log(img)
-            //console.log(creatureCards)
-            // ul.appendChild(creatureCards)
-            // console.log(ul)
-            
-            // const originTitle = document.createElement('h3')
-            // originTitle.textContent = "ORIGIN:"
-            // creatureCard.appendChild(originTitle)
 
             const originInfo = document.createElement('h4')
             originInfo.textContent = creatureObj.origin
             creatureCard.appendChild(originInfo)
 
-            // infoBtn = document.createElement('button')
-            // infoBtn.classList = 'evnt-button'
-            // infoBtn.textContent = 'LEARN MORE'
-            // creatureCard.append(infoBtn)
-            
+        
             const descInfo = document.createElement('p')
             descInfo.textContent = creatureObj.description
             creatureCard.appendChild(descInfo)
-            //console.log(descInfo)
+            // console.log(descInfo)
             
-            ul.append(creatureCard)
+             ul.append(creatureCard)
         })
             
         });
@@ -150,5 +136,5 @@ fetch("http://localhost:3000/mythological-monsters")
             newCreatureForm.style.display = "block";
         }
     }
-
+    
     toggleFormButtom.addEventListener('click', handleFormButton)
