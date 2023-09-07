@@ -20,6 +20,12 @@ fetch("http://localhost:3000/mythological-monsters")
             img.src = creatureObj.image
             img.alt = creatureObj.name
             
+            img.addEventListener('mouseover', (e) => onmouseover(e))
+
+            function onmouseover(e){
+                //console.log(e)
+            }
+            
             //console.log(img)
 
             creatureCard.appendChild(img)
@@ -65,9 +71,11 @@ fetch("http://localhost:3000/mythological-monsters")
         const creatureFormHidden = creatureForm.classList.toggle('collapsed')
 
         if (creatureFormHidden){
-            toggleFormButtom.textContent = 'Make a Monster!'
+            toggleFormButtom.textContent = 'Make a Monster!',
+            newCreatureForm.style.display= "none"
         } else {
             toggleFormButtom.textContent = 'Hide'
+            newCreatureForm.style.display = 'Block'
         }
     }
 
@@ -76,5 +84,6 @@ fetch("http://localhost:3000/mythological-monsters")
     creatureForm.addEventListener('click', (e) => {
         e.preventDefault()
 
-        //console.log(e.target)
+    //     //console.log(e.target)
     })
+
