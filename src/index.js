@@ -6,12 +6,6 @@ fetch("http://localhost:3000/mythological-monsters")
 
         const ul = document.querySelector('#list-creatures-here')
         
-        const frontOfCard = document.getElementById('front')
-        console.log(frontOfCard)
-
-        const backofCard = document.getElementById('front')
-        console.log(backofCard)
-        
         creaturesArr.forEach((creatureObj) => {
             //console.log(creaturesObj)
             //console.log(li)
@@ -30,6 +24,12 @@ fetch("http://localhost:3000/mythological-monsters")
             img.alt = creatureObj.name
             creatureCard.appendChild(img)
 
+            const originInfo = document.createElement('h4')
+            originInfo.textContent = creatureObj.origin
+
+            const descInfo = document.createElement('p')
+            descInfo.textContent = creatureObj.description
+
             creatureCard.addEventListener('mouseover', (e) => onMouseOver(e))
             creatureCard.addEventListener('mouseout', (e) => onMouseOut(e))
 
@@ -45,16 +45,41 @@ fetch("http://localhost:3000/mythological-monsters")
                 creatureName.style.textShadow = 'none'
             }
 
-            const originInfo = document.createElement('h4')
-            originInfo.textContent = creatureObj.origin
-            creatureCard.appendChild(originInfo)
+            // const originInfo = document.createElement('h4')
+            // originInfo.textContent = creatureObj.origin
+            // creatureCard.appendChild(originInfo)
 
         
-            const descInfo = document.createElement('p')
-            descInfo.textContent = creatureObj.description
-            creatureCard.appendChild(descInfo)
-            // console.log(descInfo)
+            // const descInfo = document.createElement('p')
+            // descInfo.textContent = creatureObj.description
+            // creatureCard.appendChild(descInfo)
+            // // console.log(descInfo)
             
+            const infoBtn = document.createElement('button')
+            infoBtn.classList = 'collapsed'
+            infoBtn.id = 'evnt-btn'
+            infoBtn.textContent = 'LEARN MORE'
+            creatureCard.append(infoBtn)
+
+            infoBtn.addEventListener('click', (e) => renderInfo(e))
+            function renderInfo(e){
+                e.preventDefault()
+
+                const infoHidden = infoBtn.classList.toggle('collapsed')
+
+                if (infoHidden){
+                    infoBtn.textContent = 'LEARN MORE'
+                    originInfo.remove()
+                    descInfo.remove()
+
+                }
+                else {
+                    infoBtn.textContent = 'HIDE'
+                    creatureCard.append(originInfo)
+                    creatureCard.append(descInfo)
+                }
+                
+            }
              ul.append(creatureCard)
         })
     }

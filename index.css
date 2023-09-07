@@ -38,7 +38,7 @@
     display: inline-grid;
     margin: 1rem 2rem;
     color:rgb(255, 230, 0);
-    background-color: #1d0143;
+    background-color: black;
 }
 
 .list-li img {
@@ -71,7 +71,15 @@ footer {
     font-size: 22px;
     font-family:'papyrus';
     box-shadow: 2px 2px 2px 2px rgb(225, 194, 35);
-    background-color:  #1d0143;
+    background-color: black;
+    color:rgb(225, 194, 35);
+}
+
+#evnt-btn {
+    font-size: 22px;
+    font-family:'papyrus';
+    box-shadow: 2px 2px 2px 2px rgb(225, 194, 35);
+    background-color: black;
     color:rgb(225, 194, 35);
 }
 
@@ -79,4 +87,3 @@ footer {
     font-size: 20px;
     font-family: 'Lucida Console';
   }
-
