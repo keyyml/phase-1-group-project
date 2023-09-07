@@ -11,13 +11,13 @@
 
 }
 
-/* form.expand {
+ /* /* form.expand {
     visibility: visible;
-  }
-
-form.collapsed {
-    visibility: hidden;
   } */
+
+/* form.collapsed {
+    visibility: hidden;
+  }  */ 
 
   #info-footer {
     text-align: center;
