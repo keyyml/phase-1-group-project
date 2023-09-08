@@ -52,7 +52,7 @@
 
 body {
     background-image: url('https://i.ibb.co/Bwm5Rk1/elden-ring-celestial-background-nwzkksz174zlnmtj.png');
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     background-size: cover;
