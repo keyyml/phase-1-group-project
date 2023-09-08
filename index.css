@@ -34,11 +34,13 @@
     border: rgb(255, 255, 255) solid 1px;
     padding: 1rem;
     width: 20rem;
-    height: 40rem;
+    height: 45rem;
     display: inline-grid;
     margin: 1rem 2rem;
     color:rgb(255, 230, 0);
-    background-color: black;
+    background-color: #000000;
+    opacity: 1;
+    background-image: repeating-radial-gradient( circle at 0 0, transparent 0, #000000 4px ), repeating-linear-gradient( #14144055, #141440 )
 }
 
 .list-li img {
@@ -48,11 +50,11 @@
 }
 
 body {
-    background-image: url('https://i.ibb.co/zZhpQRp/5083843.jpg');
-    background-size: cover;
+    background-image: url('https://i.ibb.co/Bwm5Rk1/elden-ring-celestial-background-nwzkksz174zlnmtj.png');
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-size: cover;
 }
   
 footer {
@@ -83,7 +85,8 @@ footer {
     color:rgb(225, 194, 35);
 }
 
-  .input-text {
-    font-size: 20px;
-    font-family: 'Lucida Console';
-  }
+h1 {
+    font-family: 'Papyrus';
+    text-decoration: underline;
+    text-decoration-color: black;
+}

@@ -37,12 +37,14 @@ fetch("http://localhost:3000/mythological-monsters")
                 creatureCard.style.boxShadow = '10px 10px 10px rgb(223, 43, 43)'
                 creatureCard.style.border = 'rgb(223, 43, 43) solid 1px'
                 creatureName.style.textShadow = '1px 2px 2px rgb(223, 43, 43)'
+                infoBtn.style.boxShadow = '2px 2px 2px 2px rgb(223, 43, 43)'
             }
 
             function onMouseOut(e){
                 creatureCard.style.boxShadow = '4px 4px 10px #c9c8c8'
                 creatureCard.style.border = 'rgb(255, 255, 255) solid 1px'
                 creatureName.style.textShadow = 'none'
+                infoBtn.style.boxShadow = '2px 2px 2px 2px rgb(225, 194, 35)'
             }
 
             // const originInfo = document.createElement('h4')
@@ -61,22 +63,45 @@ fetch("http://localhost:3000/mythological-monsters")
             infoBtn.textContent = 'LEARN MORE'
             creatureCard.append(infoBtn)
 
+            const deleteBtn = document.createElement('button')
+            deleteBtn.textContent = `Delete`
+            deleteBtn.classList = "evnt-button"
+
             infoBtn.addEventListener('click', (e) => renderInfo(e))
+            
+            deleteBtn.addEventListener('click', (e) => deleteCreature(e))
+            // creatureCard.append(deleteBtn)
+
+            function deleteCreature(e) {
+                e.preventDefault() 
+               fetch(`http://localhost:3000/mythological-monsters/${creatureObj.id}`,
+             {
+
+               method: 'DELETE'
+
+            })
+             .then((resp) => resp.json())
+             .then((data) => (data))
+        }
+
             function renderInfo(e){
                 e.preventDefault()
 
                 const infoHidden = infoBtn.classList.toggle('collapsed')
+                
 
                 if (infoHidden){
                     infoBtn.textContent = 'LEARN MORE'
                     originInfo.remove()
                     descInfo.remove()
+                    deleteBtn.remove()
 
                 }
                 else {
                     infoBtn.textContent = 'HIDE'
                     creatureCard.append(originInfo)
                     creatureCard.append(descInfo)
+                    creatureCard.append(deleteBtn)
                 }
                 
             }
@@ -113,6 +138,7 @@ fetch("http://localhost:3000/mythological-monsters")
             });
     }
 
+    
     const toggleFormButtom = document.querySelector('#create-button')
     const formContainer = document.getElementById('create-monster')
     // const newCreatureForm = document.querySelector('#create-monst-form')
