@@ -2,6 +2,36 @@ fetch("http://localhost:3000/mythological-monsters")
     .then((resp) => resp.json())
     .then((data) =>renderCreatures(data))
 
+
+    const newCreatureForm = document.querySelector('#create-monst-form')
+    newCreatureForm.addEventListener('submit', (e) => addNewCreature(e))
+    
+    function addNewCreature(e) {
+        e.preventDefault()
+        // console.log(e.target.name.value)
+        const newCreatureObj = {
+            "name": e.target.name.value,
+            "image": e.target.image.value,
+            "origin": e.target.origin.value,
+            "description": e.target.description.value
+        }
+
+        renderCreatures([newCreatureObj])
+        newCreatureForm.reset()
+
+        fetch('http://127.0.0.1:3000/mythological-monsters', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body:JSON.stringify(newCreatureObj)
+            })
+            .then((resp) => resp.json())
+            .then((creatureObj) => {
+                renderCreatures(creatureObj)
+            });
+    }
+
     function renderCreatures(creaturesArr) {
 
         const ul = document.querySelector('#list-creatures-here')
@@ -109,36 +139,6 @@ fetch("http://localhost:3000/mythological-monsters")
         })
     }
 
-    const newCreatureForm = document.querySelector('#create-monst-form')
-    newCreatureForm.addEventListener('submit', (e) => addNewCreature(e))
-    
-    function addNewCreature(e) {
-        e.preventDefault()
-        // console.log(e.target.name.value)
-        const newCreatureObj = {
-            "name": e.target.name.value,
-            "image": e.target.image.value,
-            "origin": e.target.origin.value,
-            "description": e.target.description.value
-        }
-
-        renderCreatures([newCreatureObj])
-        newCreatureForm.reset()
-
-        fetch('http://127.0.0.1:3000/mythological-monsters', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body:JSON.stringify(newCreatureObj)
-            })
-            .then((resp) => resp.json())
-            .then((creatureObj) => {
-                renderCreatures(creatureObj)
-            });
-    }
-
-    
     const toggleFormButtom = document.querySelector('#create-button')
     const formContainer = document.getElementById('create-monster')
     // const newCreatureForm = document.querySelector('#create-monst-form')
