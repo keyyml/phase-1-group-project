@@ -41,6 +41,7 @@
     background-color: #000000;
     opacity: 1;
     background-image: repeating-radial-gradient( circle at 0 0, transparent 0, #000000 4px ), repeating-linear-gradient( #14144055, #141440 )
+    
 }
 
 .list-li img {
@@ -83,10 +84,18 @@ footer {
     box-shadow: 2px 2px 2px 2px rgb(225, 194, 35);
     background-color: black;
     color:rgb(225, 194, 35);
+    text-align: center;
 }
 
 h1 {
     font-family: 'Papyrus';
     text-decoration: underline;
     text-decoration-color: black;
+}
+
+.navbar{
+    text-align: center;
+    background-color: black;
+    color: rgb(225, 194, 35);
+    background-image: repeating-radial-gradient( circle at 0 0, transparent 0, #000000 4px ), repeating-linear-gradient( #2d033655, #530354 )
 }

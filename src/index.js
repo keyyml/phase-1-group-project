@@ -151,7 +151,7 @@ fetch("http://localhost:3000/mythological-monsters")
         e.preventDefault()
         const creatureFormHidden = newCreatureForm.classList.toggle('collapsed')
         if (creatureFormHidden){
-            toggleFormButtom.textContent = 'Make a Monster!'
+            toggleFormButtom.textContent = 'Create a Creature!'
             newCreatureForm.style.display = "none";
         } else {
             toggleFormButtom.textContent = 'Hide'
