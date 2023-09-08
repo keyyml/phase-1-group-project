@@ -97,10 +97,14 @@ fetch("http://localhost:3000/mythological-monsters")
             deleteBtn.textContent = `Delete`
             deleteBtn.classList = "evnt-button"
 
-            infoBtn.addEventListener('click', (e) => renderInfo(e))
             
             deleteBtn.addEventListener('click', (e) => deleteCreature(e))
-            // creatureCard.append(deleteBtn)
+                        // creatureCard.append(deleteBtn)
+
+
+            infoBtn.addEventListener('click', (e) => renderInfo(e))
+            
+            
 
             function deleteCreature(e) {
                 e.preventDefault() 
